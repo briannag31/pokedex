@@ -2,6 +2,27 @@
 <html lang="en">
     <%- include("partials/head.ejs") %>
 <body>
-    
+    <h1>Edit <%= poke.name %></h1>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="post">
+        Name <br>
+         <input type="text" name="name" value="<%= poke.name%>"/> <br/>
+        <div class="type">
+        Type: <br>
+        <input type="text" name="type" value="<%= poke.type[0]%>"/> <br/>
+        <input type="text" name="type" value="<%= poke.type[1]%>"/> <br/>
+    </div>
+    <div class="stats">
+        Stats <br>
+         HP:<input type="text" name="type" value="<%= poke.stats.hp %>"/> <br>
+         Attack:<input type="text" name="type" value="<%= poke.stats.attack %>"/><br>
+         Defense:<input type="text" name="type" value="<%= poke.stats.defense %>"/><br>
+         Spattack:<input type="text" name="type" value="<%= poke.stats.spattack %>"/><br>
+         Spdefense:<input type="text" name="type" value="<%= poke.stats.spdefense %>"/><br>
+         Speed:<input type="text" name="type" value="<%= poke.stats.speed %>"/>
+         </div>
+
+    </div>
+        <input type="submit" value="Update <%= poke.name %>">
+    </form>
 </body>
 </html>
