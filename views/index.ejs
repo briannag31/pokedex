@@ -10,7 +10,7 @@
       <% for(let pokemon in allPokemon) { %>
       <li>
         <a href="/pokemon/<%=pokemon%>"><%=allPokemon[pokemon].name %></a> <br>
-        <a href="/pokemon/<%=pokemon%>"><%=allPokemon[pokemon].img %></a><br>
+         <a href="/pokemon/<%=pokemon%>"><img src="<%=allPokemon[pokemon].img %>"> </a><br>
         <form action="/pokemon/<%=pokemon%>?_method=delete"
           method="post">
           <input type="submit" value="delete">
