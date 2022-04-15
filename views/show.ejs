@@ -4,23 +4,22 @@
 
 <body>
     <nav>
-       <a href="/pokemon">Home</a>   
-       <a href="/pokemon/new">Create a New Pokemon</a>
+       <a class="nav" href="/pokemon">Home </a> 
+       <a class="nav" href="/pokemon/new">|  Create a New Pokemon</a>
     </nav>
     <h1><%= poke.name %> </h1>
     <img src="<%= poke.img %>"> <br>
-    <div class="type">
-        Types:
-        <%= poke.type[0] %>, 
+    <div class="type card-two">
+        <a class="titles">Types: </a> <br>
+        <%= poke.type[0] %> <br>
         <%= poke.type[1] %>
     </div>
 
-    <div class="stats">
+    <div class="stats card-two">
+       <a class="titles">Stats:</a>  <br>
        HP: <%= poke.stats.hp %> <br>
        Attack: <%= poke.stats.attack %> <br>
        Defense: <%= poke.stats.defense %> <br>
-       Spattack: <%= poke.stats.spattack %> <br>
-       Spdefense: <%= poke.stats.spdefense %> <br>
        Speed: <%= poke.stats.speed %> 
     </div>
 </body>

@@ -1,0 +1,140 @@
+body{
+    background-color: rgb(182, 21, 29);
+}
+nav{
+    background-color:#0075BE;
+    text-align: end;
+    font-size: 25px;
+}
+
+.nav{
+    color: white;
+    text-decoration: none;
+    padding-left: 20px;
+    font-family: 'Pokemon Solid', sans-serif;
+    letter-spacing: 4px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    /* cursor: pointer; */
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #0075BE;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .button:hover {background-color: #FFDE00;}
+
+  ul{
+    list-style-type: none; 
+  }
+
+  .name{
+      font-size: 20px;
+      color: white;
+      width: 157px;
+      background-color: #0075BE;
+      font-family: 'Pokemon Solid', sans-serif;
+      letter-spacing: 4px;
+      text-align: center;
+      text-decoration: none;
+
+  }
+.container{
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+img{
+    height: 20vh;
+    width: 20vh;
+    border-radius: 5px 5px 0 0;
+}
+
+h1{
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.titles{
+    font-family: 'Pokemon Solid', sans-serif;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+
+.card-one {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+  }
+  
+
+  
+  .index-buttons {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  button{
+      margin-left: 15px;
+  }
+
+  .card-two {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    color: white;
+    background-color: #0075BE;
+    width: 200px;
+    margin-bottom: 20px;
+    font-size: 23px;
+  }
+  
+
+  .card-three {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    color: white;
+    background-color: #0075BE;
+    width: 200px;
+    margin-bottom: 20px;
+    padding:10px ;
+
+  }
+  
+  .new-form{
+      width: 180px;
+      border-radius: 5px; 
+  }
+
+  .card-four {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; 
+    color: white;
+    background-color: #0075BE;
+    width: 200px;
+    margin-bottom: 20px;
+    padding:10px ;
+
+  }
+
+
+  .edit-form{
+    width: 180px;
+    border-radius: 5px; 
+}

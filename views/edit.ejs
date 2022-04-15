@@ -4,25 +4,30 @@
 <body>
     <h1>Edit <%= poke.name %></h1>
     <form action="/pokemon/<%= index %>?_method=PUT" method="post">
-        Name <br>
-         <input type="text" name="name" value="<%= poke.name%>"/> <br/>
-        <div class="type">
-        Type: <br>
-        <input type="text" name="type" value="<%= poke.type[0]%>"/> <br/>
-        <input type="text" name="type" value="<%= poke.type[1]%>"/> <br/>
+       <div class="card-three">
+        <a class="titles">Name:</a> 
+         <input class="edit-form" type="text" name="name" value="<%= poke.name%>"/> <br/>
+         </div>
+        <div class="type card-three">
+         <a class="titles">Image:</a> 
+           <input class="edit-form" type="url" name="img" id=""value="<%= poke.img%>"> <br>
+         </div>
+         <div class="type card-three">
+      
+        <a class="titles">Type:</a>  <br>
+        <input class="edit-form" type="text" name="type" value="<%= poke.type[0]%>"/> <br/>
+        <input class="edit-form" type="text" name="type" value="<%= poke.type[1]%>"/> <br/>
     </div>
-    <div class="stats">
-        Stats <br>
-         HP:<input type="text" name="type" value="<%= poke.stats.hp %>"/> <br>
-         Attack:<input type="text" name="type" value="<%= poke.stats.attack %>"/><br>
-         Defense:<input type="text" name="type" value="<%= poke.stats.defense %>"/><br>
-         Spattack:<input type="text" name="type" value="<%= poke.stats.spattack %>"/><br>
-         Spdefense:<input type="text" name="type" value="<%= poke.stats.spdefense %>"/><br>
-         Speed:<input type="text" name="type" value="<%= poke.stats.speed %>"/>
+    <div class="stats card-three">
+        <a class="titles">Stats:</a> 
+         HP:<input class="edit-form" type="text" name="hp"/> <br>
+         Attack:<input class="edit-form" type="text" name="attack"/><br>
+         Defense:<input class="edit-form" type="text" name="defense"/><br>
+         Speed:<input class="edit-form" type="text" name="speed"/>
          </div>
 
     </div>
-        <input type="submit" value="Update <%= poke.name %>">
+        <input class="edit-form" type="submit" value="Update <%= poke.name %>">
     </form>
 </body>
 </html>

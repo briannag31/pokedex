@@ -4,22 +4,28 @@
 <body>
     <h1>Create Your Own Pokemon</h1>
     <form action="/pokemon" method="POST">
-        <h4>Name</h4>
-        <input type="text" name="name" placeholder="Name"><br>
-        <h4>Type</h4>
-        <input type="text" name="type" placeholder="Type"><br>
-        <div>
-            <h4>Stats</h4>
-            <input type="text" name="stats" placeholder="HP"><br>
-            <input type="text" name="stats" placeholder="Attack"><br>
-            <input type="text" name="stats" placeholder="Defense"><br>
-            <input type="text" name="stats" placeholder="Spattack"><br>
-            <input type="text" name="stats" placeholder="Spdefense"><br>
-            <input type="text" name="stats" placeholder="Speed"><br>
+        <div class="card-three">
+        <a class="titles">Name</a> <br>
+        <input class="new-form" type="text" name="name" placeholder="Name"><br>
         </div>
-        <h4>Image</h4>
-        <input type="file" name="image" id="Add Image" placeholder="Add Image"><br>
+        <div class="card-three">
+            <a class="titles">Type</a> <br>
+        <input class="new-form" type="text" name="type" placeholder="Type"><br>
+        <input class="new-form" type="text" name="type" placeholder="Type"><br>
+        </div>
+        <div class="card-three">
+            <a class="titles">Stats</a> <br>
+            <input class="new-form" type="text" name="hp" placeholder="HP"><br>
+            <input class="new-form"  type="text" name="attack" placeholder="Attack"><br>
+            <input class="new-form" type="text" name="defense" placeholder="Defense"><br>
+            <input class="new-form" type="text" name="speed" placeholder="Speed"><br>
+        </div>
+        <div class="card-three">
+        <a class="titles">Image</a> <br>
+        <input class="new-form" type="url" name="img" id="" placeholder="Image Link"> <br>
+    </div>
         <input type="submit" value="Create New Pokemon">
       </form>
+  
 </body>
 </html>

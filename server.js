@@ -9,23 +9,18 @@ app.use(express.urlencoded({extended: false}));
 app.use(morgan("tiny"))
 app.use(methodOverride("_method")) 
 app.use("/static", express.static("public"))
-
-app.get("/", (req, res) => {
-    res.send("You are home!");
-  });
   
-  // Index 
+  // Index -- DONE
   app.get("/pokemon/", (req, res) => {
-    //   res.send(pokemon)
     res.render("index.ejs", { allPokemon: pokemon });
   });
   
-  // New Route
+  // New Route -- DONE
   app.get('/pokemon/new', (req, res) => {
     res.render('new.ejs');
   });
   
-  //Delete
+  //Delete -- DONE
   app.delete("/pokemon/:id", (req,res)=>{
     const index = req.params.id
     pokemon.splice(index, 1)
@@ -34,15 +29,27 @@ app.get("/", (req, res) => {
 
   //Update
  app.put("/pokemon/:id", (req, res) => {
-    pokemon[req.params.id] = req.body
-      res.redirect("/pokemon")
+    let updatedPokemon = {...pokemon[req.params.id]}
+    pokemon[req.params.id] = updatedPokemon
+    updatedPokemon.name = req.body.name
+    updatedPokemon.img = req.body.img
+    updatedPokemon.type = [req.body.type[0], req.body.type[1]]
+    updatedPokemon.stats= {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        speed: req.body.speed
+    }
+   
+   
+    console.log(updatedPokemon.stats.hp)
+      res.redirect(`/pokemon/${req.params.id}`)
 })
   
 
  //Create
  app.post('/pokemon', (req, res) => {
     pokemon.push(req.body);
-    console.log(pokemon);
     res.redirect('/pokemon');
   });
 
@@ -54,32 +61,11 @@ app.get("/pokemon/:id/edit", (req,res)=>{
     })
 })
 
-// Show
+// Show -- DONE
 app.get("/pokemon/:id", (req, res) => {
  res.render("show.ejs", { poke: pokemon[req.params.id] });
 });
   
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 app.listen(PORT, () => {
     console.log(`We are listening on port ${PORT}`);
