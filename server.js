@@ -27,7 +27,7 @@ app.use("/static", express.static("public"))
     res.redirect("/pokemon")
   })
 
-  //Update
+  //Update -- DONE
  app.put("/pokemon/:id", (req, res) => {
     let updatedPokemon = {...pokemon[req.params.id]}
     pokemon[req.params.id] = updatedPokemon
@@ -40,20 +40,28 @@ app.use("/static", express.static("public"))
         defense: req.body.defense,
         speed: req.body.speed
     }
-   
-   
-    console.log(updatedPokemon.stats.hp)
       res.redirect(`/pokemon/${req.params.id}`)
 })
   
 
- //Create
+ //Create -- DONE
  app.post('/pokemon', (req, res) => {
-    pokemon.push(req.body);
+const newPokemon = {
+  name: req.body.name,
+  type: [req.body.type[0], req.body.type[1]],
+  img:req.body.img,
+  stats:{
+    hp: req.body.hp,
+    attack: req.body.attack,
+    defense: req.body.defense,
+    speed: req.body.speed
+  }
+ }
+    pokemon.push(newPokemon);
     res.redirect('/pokemon');
   });
 
-//edit
+//Edit -- DONE
 app.get("/pokemon/:id/edit", (req,res)=>{
      res.render("edit.ejs",{ 
         poke:pokemon[req.params.id],
